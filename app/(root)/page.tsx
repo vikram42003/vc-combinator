@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <h1 className="text-2xl">Home</h1>
+    <h1 className="text-2xl font-work-sans">Home</h1>
   );
 }
