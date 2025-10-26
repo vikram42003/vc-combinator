@@ -3,6 +3,7 @@
 import { useTransition } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
+import { Search, X } from "lucide-react";
 
 const Searchbar = ({ placeholder }: { placeholder: string }) => {
   const currentPath = usePathname();
@@ -46,11 +47,11 @@ const Searchbar = ({ placeholder }: { placeholder: string }) => {
       <div className="flex gap-2">
         {searchParams.has("query") && (
           <>
-            <button type="button" onClick={resetSearch} className="search-btn text-white font-semibold">
-              X
+            <button type="button" onClick={resetSearch} className="search-btn text-white">
+              <X className="size-5" />
             </button>
-            <button type="submit" className="search-btn text-white font-semibold">
-              S
+            <button type="submit" className="search-btn text-white">
+              <Search className="size-5" />
             </button>
           </>
         )}
